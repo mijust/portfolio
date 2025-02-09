@@ -10,7 +10,7 @@ export function Hero() {
               Welcome to My Portfolio
             </h1>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-              I'm a passionate developer creating beautiful and functional web experiences.
+              I&apos;m a passionate developer creating beautiful and functional web experiences.
             </p>
           </div>
           <div className="space-x-4">
