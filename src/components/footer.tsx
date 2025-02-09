@@ -14,17 +14,17 @@ export default function Footer() {
           <nav className="mb-4 md:mb-0">
             <ul className="flex space-x-6">
               <li>
-                <Link href="#about" className="hover:text-blue-500 transition-colors">
+                <Link href="#about" className="hover:text-blue-500 transition-colors text-white">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="hover:text-blue-500 transition-colors">
+                <Link href="#projects" className="hover:text-blue-500 transition-colors text-white">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="hover:text-blue-500 transition-colors">
+                <Link href="#contact" className="hover:text-blue-500 transition-colors text-white">
                   Contact
                 </Link>
               </li>
