@@ -21,13 +21,13 @@ type SkillCategory = {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Working Student: Operations & Engeneerign Standarts",
+    title: "Working Student: Operations & Engineering Standards",
     company: "Siemens AG - SI B",
     period: "2024 - Present",
     description: [
       "Research: Development and Automation with AI",
       "Trained large language models to automate tasks",
-      "Processautomation with RPA",
+      "Process automation with RPA",
     ],
   },
   {
