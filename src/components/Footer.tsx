@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, Linkedin, Github } from "lucide-react"
+import { EMAIL, LINKEDIN, GITHUB } from "../constants/links"
 
 export default function Footer() {
   return (
@@ -31,11 +32,11 @@ export default function Footer() {
             </ul>
           </nav>
           <div className="flex space-x-4">
-            <a href="mailto:michael.justus@mijust.net" className="text-blue-500 hover:text-blue-600 transition-colors">
+            <a href={EMAIL} className="text-blue-500 hover:text-blue-600 transition-colors">
               <Mail size={20} />
             </a>
             <a
-              href="https://www.linkedin.com/in/michael-justus-288a44244/"
+              href={LINKEDIN}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600 transition-colors"
@@ -43,7 +44,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/mijust"
+              href={GITHUB}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600 transition-colors"

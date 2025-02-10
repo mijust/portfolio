@@ -1,4 +1,5 @@
 import { Download, Briefcase, GraduationCap, Code } from "lucide-react"
+import { RESUME } from "../constants/links"
 
 type ExperienceItem = {
   title: string
@@ -148,7 +149,7 @@ export default function Resume() {
         </div>
         <div className="mt-12 text-center">
           <a
-            href="/path-to-your-resume.pdf"
+            href={RESUME}
             download
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >

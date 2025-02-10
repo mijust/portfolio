@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
+import { GITHUB } from "../constants/links"
 
 const projects = [
   {
@@ -16,7 +17,7 @@ const projects = [
       "Description of your second project. Explain what problem it solves and how you approached the solution.",
     image: "/placeholder.jpg?height=300&width=400",
     liveLink: "#",
-    githubLink: "#",
+    githubLink: GITHUB,
     tags: ["TypeScript", "Node.js", "MongoDB"],
   },
   {
