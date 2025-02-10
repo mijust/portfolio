@@ -6,10 +6,11 @@ const projects = [
   {
     title: "UI Digital Campus",
     description: "A interactive WebApp with argumented reality features for visitors to learn and interact with the campus.",
-    image: "/projects_img/uidc.png",
+    image: "/projects_img/uidc.png?height=300&width=400",
     liveLink: "#",
     githubLink: "#",
     tags: ["React", "Next.js", "Tailwind CSS", "A-Frame"],
+    isInternal: true,
   },
   {
     title: "Project 2",
@@ -19,6 +20,7 @@ const projects = [
     liveLink: "#",
     githubLink: GITHUB,
     tags: ["TypeScript", "Node.js", "MongoDB"],
+    isInternal: false,
   },
   {
     title: "Project 3",
@@ -27,6 +29,7 @@ const projects = [
     liveLink: "#",
     githubLink: "#",
     tags: ["Vue.js", "Firebase", "Sass"],
+    isInternal: false,
   },
 ]
 
@@ -59,22 +62,30 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex justify-between">
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors"
-                  >
-                    <ExternalLink size={18} className="mr-1" /> Live Demo
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors"
-                  >
-                    <Github size={18} className="mr-1" /> GitHub
-                  </a>
+                  {project.isInternal ? (
+                    <span className="text-gray-500 inline-flex items-center">
+                      Internal Project
+                    </span>
+                  ) : (
+                    <>
+                      <a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors"
+                      >
+                        <ExternalLink size={18} className="mr-1" /> Live Demo
+                      </a>
+                      <a
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-400 hover:text-blue-300 inline-flex items-center transition-colors"
+                      >
+                        <Github size={18} className="mr-1" /> GitHub
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
