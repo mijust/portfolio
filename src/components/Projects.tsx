@@ -6,7 +6,7 @@ const projects = [
   {
     title: "UI Digital Campus",
     description: "A interactive WebApp with argumented reality features for visitors to learn and interact with the campus.",
-    image: "/projects_img/uidc.png?height=300&width=400",
+    image: "/projects_img/uidc.png",
     liveLink: "#",
     githubLink: "#",
     tags: ["React", "Next.js", "Tailwind CSS", "A-Frame"],
