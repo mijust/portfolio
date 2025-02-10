@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Project 1",
     description: "A brief description of your first project. Highlight the key features and technologies used.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/placeholder.jpg?height=300&width=400",
     liveLink: "#",
     githubLink: "#",
     tags: ["React", "Next.js", "Tailwind CSS"],
@@ -14,7 +14,7 @@ const projects = [
     title: "Project 2",
     description:
       "Description of your second project. Explain what problem it solves and how you approached the solution.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/placeholder.jpg?height=300&width=400",
     liveLink: "#",
     githubLink: "#",
     tags: ["TypeScript", "Node.js", "MongoDB"],
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Project 3",
     description: "Details about your third project. Mention any challenges you faced and how you overcame them.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/placeholder.jpg?height=300&width=400",
     liveLink: "#",
     githubLink: "#",
     tags: ["Vue.js", "Firebase", "Sass"],
@@ -38,7 +38,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
+              className="bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
             >
               <Image
                 src={project.image || "/placeholder.svg"}

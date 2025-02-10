@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Link href="/" className="text-xl font-bold text-blue-500">
-              YourName
+              Michael Justus
             </Link>
           </div>
           <nav className="mb-4 md:mb-0">
@@ -31,11 +31,11 @@ export default function Footer() {
             </ul>
           </nav>
           <div className="flex space-x-4">
-            <a href="mailto:your.email@example.com" className="text-blue-500 hover:text-blue-600 transition-colors">
+            <a href="mailto:michael.justus@mijust.net" className="text-blue-500 hover:text-blue-600 transition-colors">
               <Mail size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/michael-justus-288a44244/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600 transition-colors"
@@ -43,7 +43,7 @@ export default function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/mijust"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-600 transition-colors"
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} YourName. All rights reserved.
+          © {new Date().getFullYear()} Michael Justus. All rights reserved.
         </div>
       </div>
     </footer>
