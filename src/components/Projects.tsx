@@ -4,12 +4,12 @@ import { GITHUB } from "../constants/links"
 
 const projects = [
   {
-    title: "Project 1",
-    description: "A brief description of your first project. Highlight the key features and technologies used.",
-    image: "/placeholder.jpg?height=300&width=400",
+    title: "UI Digital Campus",
+    description: "A interactive WebApp with argumented reality features for visitors to learn and interact with the campus.",
+    image: "/projects_img/uidc.png",
     liveLink: "#",
     githubLink: "#",
-    tags: ["React", "Next.js", "Tailwind CSS"],
+    tags: ["React", "Next.js", "Tailwind CSS", "A-Frame"],
   },
   {
     title: "Project 2",

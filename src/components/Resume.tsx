@@ -21,37 +21,32 @@ type SkillCategory = {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Senior Web Developer",
-    company: "Tech Innovators Inc.",
-    period: "2020 - Present",
+    title: "Working Student: Operations & Engeneerign Standarts",
+    company: "Siemens AG - SI B",
+    period: "2024 - Present",
     description: [
-      "Lead a team of 5 developers in creating responsive web applications",
-      "Implemented CI/CD pipelines, reducing deployment time by 40%",
-      "Optimized website performance, improving load times by 25%",
+      "Research: Development and Automation with AI",
+      "Trained large language models to automate tasks",
+      "Processautomation with RPA",
     ],
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Solutions Ltd.",
-    period: "2017 - 2020",
+    title: "Working Student: Infrastructure",
+    company: "kimeta GmbH",
+    period: "2023 - 2024",
     description: [
-      "Developed and maintained multiple client websites using React and Node.js",
+      "Technical support for colleagues",
       "Integrated third-party APIs to enhance website functionality",
-      "Collaborated with UX designers to implement user-friendly interfaces",
+      "Set up and supported AWS infrastructure",
     ],
   },
 ]
 
 const education: EducationItem[] = [
   {
-    degree: "Master of Science in Computer Science",
-    institution: "Tech University",
-    year: "2017",
-  },
-  {
-    degree: "Bachelor of Science in Software Engineering",
-    institution: "State University",
-    year: "2015",
+    degree: "Bachelor of Science in Computer Science",
+    institution: "Technische Universität Darmstadt",
+    year: "actual",
   },
 ]
 
