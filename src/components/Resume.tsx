@@ -28,6 +28,7 @@ const experiences: ExperienceItem[] = [
       "Research: Development and Automation with AI",
       "Trained large language models to automate tasks",
       "Process automation with RPA",
+      "Creating, improving and evaluating BPMN"
     ],
   },
   {
@@ -44,7 +45,7 @@ const experiences: ExperienceItem[] = [
 
 const education: EducationItem[] = [
   {
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Bachelor of Science in Business Informatics",
     institution: "Technische Universität Darmstadt",
     year: "actual",
   },
@@ -62,6 +63,10 @@ const skills: SkillCategory[] = [
   {
     category: "Tools & Platforms",
     skills: ["Git", "Docker", "AWS", "Firebase", "MongoDB"],
+  },
+  {
+    category: "Process & Project Management",
+    skills: ["BPMN", "Process Management", "Project Management", "Change Management", "Process Optimization"]
   },
 ]
 
