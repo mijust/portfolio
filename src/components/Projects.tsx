@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
-import { GITHUB } from "../constants/links"
+import { SPACE, GITHUB_space } from "../constants/links"
 
 const projects = [
   {
@@ -13,13 +13,13 @@ const projects = [
     isInternal: true,
   },
   {
-    title: "Project 2 - TBD",
+    title: "Space Dashboard",
     description:
-      "Description of your second project. Explain what problem it solves and how you approached the solution.",
-    image: "/placeholder.jpg?height=300&width=400",
-    liveLink: "#",
-    githubLink: GITHUB,
-    tags: ["TBD"],
+      "A Dashboard showing Nasa Pictures and Information fetched with APIs.",
+    image: "//projects_img/space.png",
+    liveLink: SPACE,
+    githubLink: GITHUB_space,
+    tags: ["TypeScript", "React", "Next.js", "Tailwind CSS", "NASA API"],
     isInternal: false,
   },
   {
