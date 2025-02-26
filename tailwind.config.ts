@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,9 +7,25 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class', // Wichtig: Aktiviere class-based Dark Mode
   theme: {
     extend: {
       colors: {
+        // Dunkel-Modus Farben
+        dark: {
+          bg: "#111827",
+          text: "#f3f4f6",
+          primary: "#3B82F6",
+          secondary: "#1E40AF"
+        },
+        // Hell-Modus Farben
+        light: {
+          bg: "#f3f4f6",
+          text: "#111827",
+          primary: "#2563EB",
+          secondary: "#1D4ED8"
+        },
+        // Bestehende Farben bleiben unverändert
         blue: {
           500: "#3B82F6",
           600: "#2563EB",

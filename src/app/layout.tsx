@@ -1,9 +1,10 @@
-import "./globals.css"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import type React from "react"
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import type React from "react";
+import CustomCursor from '../components/CustomCursor';
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "mijust Portfolio",
@@ -17,8 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>{children}</body>
+      <body className={inter.className}>
+          <CustomCursor />
+          {children}
+      </body>
     </html>
   )
 }
-
