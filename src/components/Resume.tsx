@@ -1,23 +1,26 @@
-import { Download, Briefcase, GraduationCap, Code } from "lucide-react"
-import { RESUME } from "../constants/links"
+"use client";
+
+import { Download, Briefcase, GraduationCap, Code } from "lucide-react";
+import { RESUME } from "../constants/links";
+import { motion } from "framer-motion";
 
 type ExperienceItem = {
-  title: string
-  company: string
-  period: string
-  description: string[]
-}
+  title: string;
+  company: string;
+  period: string;
+  description: string[];
+};
 
 type EducationItem = {
-  degree: string
-  institution: string
-  year: string
-}
+  degree: string;
+  institution: string;
+  year: string;
+};
 
 type SkillCategory = {
-  category: string
-  skills: string[]
-}
+  category: string;
+  skills: string[];
+};
 
 const experiences: ExperienceItem[] = [
   {
@@ -28,7 +31,7 @@ const experiences: ExperienceItem[] = [
       "Research: Development and Automation with AI",
       "Trained large language models to automate tasks",
       "Process automation with RPA",
-      "Creating, improving and evaluating BPMN"
+      "Creating, improving and evaluating BPMN",
     ],
   },
   {
@@ -41,7 +44,7 @@ const experiences: ExperienceItem[] = [
       "Set up and supported AWS infrastructure",
     ],
   },
-]
+];
 
 const education: EducationItem[] = [
   {
@@ -49,7 +52,7 @@ const education: EducationItem[] = [
     institution: "Technische Universität Darmstadt",
     year: "actual",
   },
-]
+];
 
 const skills: SkillCategory[] = [
   {
@@ -66,15 +69,23 @@ const skills: SkillCategory[] = [
   },
   {
     category: "Process & Project Management",
-    skills: ["BPMN", "Process Management", "Project Management", "Change Management", "Process Optimization"]
+    skills: [
+      "BPMN",
+      "Process Management",
+      "Project Management",
+      "Change Management",
+      "Process Optimization",
+    ],
   },
-]
+];
 
 export default function Resume() {
   return (
     <section id="resume" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-blue-500">Resume</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-center text-blue-500">
+          Resume
+        </h1>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="space-y-12">
@@ -88,7 +99,9 @@ export default function Resume() {
                   key={index}
                   className="mb-8 bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-blue-300">{exp.title}</h3>
+                  <h3 className="text-xl font-semibold text-blue-300">
+                    {exp.title}
+                  </h3>
                   <p className="text-blue-200">{exp.company}</p>
                   <p className="text-sm text-gray-400 mb-3">{exp.period}</p>
                   <ul className="list-disc list-inside space-y-2">
@@ -114,7 +127,9 @@ export default function Resume() {
                   key={index}
                   className="mb-6 bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-blue-300">{edu.degree}</h3>
+                  <h3 className="text-xl font-semibold text-blue-300">
+                    {edu.degree}
+                  </h3>
                   <p className="text-blue-200">{edu.institution}</p>
                   <p className="text-sm text-gray-400">{edu.year}</p>
                 </div>
@@ -127,22 +142,34 @@ export default function Resume() {
                 Skills
               </h2>
               {skills.map((category, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="mb-6 bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold mb-3 text-blue-300">{category.category}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-300">
+                    {category.category}
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, i) => (
-                      <span
+                      <motion.span
                         key={i}
-                        className="bg-blue-500 text-white text-sm px-3 py-1 rounded-full transition-all duration-300 hover:bg-blue-600 hover:shadow-md"
+                        initial={{ scale: 1 }}
+                        whileHover={{
+                          scale: 1.1,
+                          backgroundColor: "#2563EB",
+                          boxShadow: "0 0 8px rgba(59, 130, 246, 0.5)",
+                        }}
+                        className="bg-blue-500 text-white text-sm px-3 py-1 rounded-full transition-all duration-300"
                       >
                         {skill}
-                      </span>
+                      </motion.span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -159,6 +186,5 @@ export default function Resume() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
