@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type React from "react";
 import CustomCursor from '../components/CustomCursor';
+import ParticleBackground from '../components/ParticleBackground';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
           <CustomCursor />
+          <ParticleBackground />
           {children}
       </body>
     </html>

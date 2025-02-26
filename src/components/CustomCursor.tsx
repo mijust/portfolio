@@ -63,7 +63,7 @@ export default function CustomCursor() {
   if (!isVisible) return null;
   
   // Calculate size for the outer ring based on state
-  const outerRingSize = isHovering ? 72 : 48; // 48px default, 72px when hovering (1.5x scale)
+  const outerRingSize = isHovering ? 30 : 48; // 48px default, 30px when hovering (smaller when hovering)
   
   return (
     <>
