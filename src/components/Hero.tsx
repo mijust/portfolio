@@ -2,12 +2,10 @@
 
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import ParticleBackground from "./ParticleBackground";
 
 export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 overflow-hidden">
-      <ParticleBackground />
       
       <div className="text-center z-10">
         <motion.h1 
