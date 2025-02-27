@@ -163,6 +163,7 @@ export default function Resume() {
                           backgroundColor: "#2563EB",
                           boxShadow: "0 0 8px rgba(59, 130, 246, 0.5)",
                         }}
+                        transition={{ duration: 0.2 }}
                         className="bg-blue-500 text-white text-sm px-3 py-1 rounded-full transition-all duration-300"
                       >
                         {skill}

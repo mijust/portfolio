@@ -3,6 +3,8 @@
 import { SPACE, GITHUB_space } from "../constants/links";
 import ProjectCard from "./ProjectCard";
 import AnimatedSection from "./AnimatedSection";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from "framer-motion";
 
 const projects = [
   {
@@ -36,21 +38,33 @@ const projects = [
 ];
 
 export default function Projects() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const [hasRendered, setHasRendered] = useState(false);
+  
+  useEffect(() => {
+    if (isInView) {
+      setHasRendered(true);
+    }
+  }, [isInView]);
+
   return (
-    <section id="projects" className="py-20 bg-gray-900">
+    <section id="projects" className="py-20 bg-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-blue-500">My Projects</h2>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              index={index}
-              {...project}
-            />
-          ))}
-        </div>
+        {(isInView || hasRendered) && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                index={index}
+                {...project}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

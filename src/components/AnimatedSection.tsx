@@ -1,7 +1,7 @@
 "use client";
 
-import React, { ReactNode } from 'react';
-import { motion, Variants } from 'framer-motion';
+import React, { ReactNode, useState, useEffect, useRef } from 'react';
+import { motion, Variants, useInView } from 'framer-motion';
 
 interface AnimatedSectionProps {
   children: ReactNode;
@@ -10,25 +10,35 @@ interface AnimatedSectionProps {
 }
 
 const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   visible: { 
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeOut"
     }
   }
 };
 
 export default function AnimatedSection({ children, className = "", delay = 0 }: AnimatedSectionProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const [hasAnimated, setHasAnimated] = useState(false);
+  
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
+
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      animate={isInView || hasAnimated ? "visible" : "hidden"}
       variants={fadeInUp}
-      transition={{ delay: delay }}
+      transition={{ delay }}
       className={className}
     >
       {children}

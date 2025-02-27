@@ -36,11 +36,11 @@ export default function Hero() {
           href="#projects"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
           whileHover={{ 
             scale: 1.05,
             boxShadow: "0 0 15px rgba(59, 130, 246, 0.5)"
           }}
+          transition={{ duration: 0.2 }}
           className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors"
         >
           View My Work

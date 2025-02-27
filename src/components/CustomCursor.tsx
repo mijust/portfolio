@@ -10,6 +10,18 @@ export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Check if we're on a touch device (mobile)
+    const isTouchDevice = () => 
+      'ontouchstart' in window || 
+      navigator.maxTouchPoints > 0 || 
+      (navigator as any).msMaxTouchPoints > 0;
+    
+    // Don't show custom cursor on touch devices
+    if (isTouchDevice()) {
+      document.body.style.cursor = 'auto';
+      return;
+    }
+    
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
       
